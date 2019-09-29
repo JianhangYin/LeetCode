@@ -6,7 +6,7 @@ Do not allocate extra space for another array, you must do this by modifying the
 
 
 class Solution:
-    def removeDuplicates(self, nums: List[int]) -> int:
+    def removeDuplicates(self, nums: list) -> int:
         if len(nums) <= 2:
             return len(nums)
         left = 1
