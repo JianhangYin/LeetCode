@@ -1,6 +1,6 @@
 [TOC]
 ## Amazon
-### Reorder Data In Log Files
+### [937] Reorder Data In Log Files
 
 前提：字符串数组，有两种字符串：
 - 开头第一个词是标签，后面只含有单词用空格连接。
@@ -24,7 +24,7 @@ split之后的数组。其中判断是不是数字可以用isdigit()。
 - space complexity: O(n)
 ---
 
-### Critical Connections in a Network
+### [1192] Critical Connections in a Network
 前提：一个无向图，vertex个数是n，input如下：
 - n：vertex的个数
 - list：无向图的所有edge。list的list。
@@ -50,7 +50,7 @@ split之后的数组。其中判断是不是数字可以用isdigit()。
 4. 最后返回res。
 ---
 
-### Two Sum
+### [1] Two Sum
 前提：一个数字的list，一个target数字。
 
 目的：返回一个list，包含两个index，使得这两个index对应的input的和等于target。
@@ -66,7 +66,7 @@ split之后的数组。其中判断是不是数字可以用isdigit()。
 - time complexity: O(n)
 ---
 
-### Number of Islands
+### [200] Number of Islands
 前提：2D数组，1代表陆地，0代表海水，只要是水平和垂直没有陆地相连，就是一个独立的岛屿。
 
 目的：返回一个数字，代表2D地图的岛屿数量。
@@ -77,7 +77,7 @@ split之后的数组。其中判断是不是数字可以用isdigit()。
 3. DFS的终止条件是超出边界，或者当前的点不是陆地。所以每次判断完之后要把当前陆地换成海水，然后四个方向递归。
 ---
 
-### Copy List with Random Pointer
+### [138] Copy List with Random Pointer
 前提：一个单向链表，每一个node会有一个随机指针，指向任意node或者None。
 
 目的：返回一个deep copy的链表。
@@ -89,7 +89,7 @@ split之后的数组。其中判断是不是数字可以用isdigit()。
 - 注意2：记得新node的next和random要连接旧node的next和random对应的新node。
 ---
 
-### Longest Palindromic Substring
+### [5] Longest Palindromic Substring
 前提：一个字符串。
 
 目的：返回最长的回文。
@@ -102,7 +102,7 @@ split之后的数组。其中判断是不是数字可以用isdigit()。
 5. 偶数就是helper(string,i,i+1)。
 ---
 
-### K Closest Points to Origin
+### [973] K Closest Points to Origin
 前提：输入一个(x,y)坐标的list和一个K值。
 
 目的：返回K个距离(0, 0)最近的坐标list。
@@ -112,7 +112,7 @@ split之后的数组。其中判断是不是数字可以用isdigit()。
 2. 然后返回前K个元素的list。
 ---
 
-### LRU Cache
+### [146] LRU Cache
 前提：设计一个数据结构，满足一下：
 - get: 获取key对应的正数值，如果没有，返回-1
 - put: 将key和value存储到数据库中，但是，不能超过它的容量，如果超过容量，则最久没有使用的删除，添加新的。
@@ -132,7 +132,7 @@ split之后的数组。其中判断是不是数字可以用isdigit()。
 - popitem(last=False) 删除并且返回最早进入的值。
 ---
 
-### Most Common Word
+### [819] Most Common Word
 前提：输入一个字符串，同时给定一个banned字符串list。返回除了banned里之外，最长出现在input字符串里的单词。
 
 思路：
@@ -147,7 +147,7 @@ split之后的数组。其中判断是不是数字可以用isdigit()。
 - 在定义dictionary的时候，注意使用defaultdict(lambda：0)，这样子后来就可以直接用+=来增加单词出现的数量了。
 ---
 
-### Prison Cells After N Days
+### [957] Prison Cells After N Days
 前提：一排牢房，如果前一天左右两个监狱都有人或者都没人，则第二天，这个监狱有人，如果左右两边一个有人一个没人，则第二天，这个监狱没人。
 
 目的：给定一个初始状态，再给定一个天数，返回那天的状态。
@@ -165,7 +165,7 @@ N应该为14。所以time_limit = 14 if not N % 14 else N % 14。
 2. 我们做while循环的时候因为最左右两边的永远是0，所以可以在for外面直接给这两个赋值。
 ---
 
-### Subtree of Another Tree
+### [572] Subtree of Another Tree
 前提：给定两个树，判断s树是不是t树的子树。
 
 思路：
@@ -174,7 +174,7 @@ N应该为14。所以time_limit = 14 if not N % 14 else N % 14。
 3. 有一点需要注意，返回字符串前要加一个特殊符号，为了避免{12}和{2}这种情况。
 ---
 
-### Trapping Rain Water
+### [42] Trapping Rain Water
 前提：雨水收集问题，一个list，每个item代表一个宽度为1的挡板，问这个list能接多少雨水。
 
 思路：
@@ -190,7 +190,7 @@ N应该为14。所以time_limit = 14 if not N % 14 else N % 14。
 - 然后在用更新后的max和当前指针做差，就是雨水值。
 ---
 
-### Merge Two Sorted Lists
+### [21] Merge Two Sorted Lists
 前提：两个排好序的链表，把他们合并为一个新的排序链表。
 
 思路：
@@ -198,7 +198,7 @@ N应该为14。所以time_limit = 14 if not N % 14 else N % 14。
 2. 然后比较两个链表第一个值，返回小的那个。其中返回之前，把小的那个的next和大的那个recursive一下，连接到小的那个的next。
 ---
 
-### Minimum Cost to Merge Stones
+### [1000] Minimum Cost to Merge Stones
 前提：一个list代表一横行的石堆，每个数字代表石堆的石头数量。同时给定一个K值。
 
 目的：一次合并K个连读的石堆，问把这个横行的石堆合并为一堆，最小花费多少（花费是K个石堆包含石头的个数和）。如果不能合并，返回-1。
@@ -214,7 +214,7 @@ N应该为14。所以time_limit = 14 if not N % 14 else N % 14。
 8. 最后，直接返回dp(0, n - 1)就可以了。
 ---
 
-### Serialize and Deserialize Binary Tree
+### [297] Serialize and Deserialize Binary Tree
 前提：把一个树字符化，然后在解字符化。
 
 思路：
@@ -223,7 +223,7 @@ N应该为14。所以time_limit = 14 if not N % 14 else N % 14。
 3. 这里我们选择先序遍历树的方式。
 ---
 
-### Binary Tree Zigzag Level Order Traversal
+### [103] Binary Tree Zigzag Level Order Traversal
 前提：给一个树，按照偶数排从左到右，奇数排从右到左，输出一个list的list。
 
 思路：
@@ -232,7 +232,7 @@ N应该为14。所以time_limit = 14 if not N % 14 else N % 14。
 3. 但是记住每当level加1的时候，记得给result添加一个新的list进去，放置新level的元素。（具体操作就是判断深度是不是比result数组里的元素大，当深度为0，数组的长度应该为1。如果深度增加了，数组长度应该也增加。）
 ---
 
-### Find Median from Data Stream
+### [295] Find Median from Data Stream
 前提：设计一个数据结构，有两个基本操作，第一就是放进去一个整数，第二个就是返回当前数据库里的中间值。其中如果是奇数个，返回中间那个，如果是偶数个，返回中间两个的平均值。
 
 思路：
@@ -242,7 +242,7 @@ N应该为14。所以time_limit = 14 if not N % 14 else N % 14。
 4. 在取中间值的时候，判断一下small和large的个数，然后返回相应的值。用large[0]来取最小值，- small[0]取最大值。
 ---
 
-### Add Two Numbers
+### [2] Add Two Numbers
 前提：两个链表，分别代表两个数，链表从低位到高位，也就是把这个数反过来存到链表里。
 
 目的：设计一个算法，求出这两个链表代表数的值，然后返回一个链表。也是反过来存储的。
@@ -256,7 +256,7 @@ N应该为14。所以time_limit = 14 if not N % 14 else N % 14。
 4. 记得返回的是链表的head。
 ---
 
-### Prime Palindrome
+### [866] Prime Palindrome
 前提：给一个正整数，返回不小于它的最小质数回文。
 
 思路：
@@ -266,7 +266,7 @@ N应该为14。所以time_limit = 14 if not N % 14 else N % 14。
 4. 然后判断是不是回文，因为一共最大是10**8，不可能是偶数，那么只能是10的7次方，然后我们取前5位，也就是10的5次方为最大值，初始值是10的input位数整除2。在循环判断里，首先组成回文的整数，然后判断是不是prime并且大于等于input，返回结果就行了。
 ---
 
-### Word Ladder
+### [127] Word Ladder
 前提：给定两个单词，和一个字典list，从list找出最短的使startword变为endword的路径，返回变换的次数。
 - 变换只能一次变换一个字母。
 - 如果没有符合的变换，返回0。包括endword不在list里和没有路径可以使startword到endword。
@@ -281,7 +281,7 @@ N应该为14。所以time_limit = 14 if not N % 14 else N % 14。
 7. 如果不行，就返回0。
 ---
 
-### Merge k Sorted Lists
+### [23] Merge k Sorted Lists
 前提：输入一个链表list，每个链表都是排序过的。要求输入一个把所有链表排序的node。
 
 思路：
@@ -294,6 +294,67 @@ N应该为14。所以time_limit = 14 if not N % 14 else N % 14。
 7. 最后给pointer新建一个ListNode(ndoe.val)，pointer = pointer.next
 8. 最后返回dummy.next。
 ---
+
+### [763] Partition Labels
+前提：一个只包含字母的字符串，要求分割字符串，每个字母只能出现在一个分割部分里。
+
+思路：
+1. 首先，遍历一次字符串，用dictionary记录一下每个字母最后一次出现的index。
+2. 然后定义两个指针，一个左指针，一个右指针，一个最大index值。右指针不停的走，写一个while循环，直到右指针到达最后。
+3. 每次右指针走到一个字母，更新一下目前遍历过的单词的最大index。当最大index等于右指针的时候，所以右指针和左指针之间所有的字符都只在这里面出现。将这个区间放入结果中，然后更新右指针，和最大index。
+---
+
+### [240] Search a 2D Matrix II
+前提：一个n*m的数组，所有row和col都是按照升序排列，查询一个数字是否在这个数组里。
+
+思路：
+1. 首先从矩阵右上角开始搜索，开始判断，如果目标比这个数小，证明这个col都不可能了，而目标比这个数大，证明row都不可能了。
+2. 写一个while函数，遍历一下就可以了。
+
+重点：
+- time complexity: O(n + m).
+- 从右上角蛇形循环。
+---
+
+### [139] Word Break
+前提：给了一个单词和一个单词list，问这个单词是否可以分割成几个小单词，并且小单词都在list里。
+
+思路：
+1. 这题用DP来做，因为单词的长度是n，那么我们建立一个dp长度为n+1的list。并且设置dp[0]=True，其他的都为False。
+2. 具体说说dp的含义，dp[i]就代表单词[0:i]是否符合条件。
+3. 然后为了dp进行一次for循环，从1到n。
+4. 然后嵌套一个子循环，从0一直到i-1。
+5. 如果dp[j]为true同时单词[j:i]也在list里，说明dp[i]也是true，并且break。
+6. 最后直接返回dp最后一个值。
+---
+
+### [472] Concatenated Words
+前提：给了一个list的字符串，返回所有由至少两个短单词组成的字符串的list。
+
+思路：
+1. 这道题本来是结合WordBreak来做，但是失败了。简单说一下方法，因为我们用DP可以算出某一个单词是不是一个list组成的，也就是上面那个。所以我们首先按照字符串长度把list排列一下。遍历i，每次都查看i单词是不是由前面的单词组组合成的。也就是wordbreak外面再来一个循环，但是超时了。
+2. 所以我们用dfs来做。
+3. 首先我们来写DFS函数，把这个某个单词input进去，循环处理，把单词分为prefix和suffix两部分，如果prefix和suffix分别都在list里，那么返回true，或者如果prefix在list里，recursive的做suffixDFS也是true，那么也返回True。循环完毕返回False。
+4. 外面，我们遍历每一个单词，如果满足DFS，就添加到res。最后返回。
+---
+
+### [341] Flatten Nested List Iterator
+前提：一个多次嵌套的整数list，把它展开平整。
+
+目的：建立一个class，要求有两个方法，next和hasNext，不断的循环使用这两个方法，然后输出一个展平后的list。其中有三个函数可以用：
+- isInteger：返回是否是个整数
+- getInteger：如果是整数返回，如果是list，返回None
+- getList：如果是list返回，如果是整数，返回None
+
+思路：
+1. 不一定每次next都一定要返回一个整数，也可以返回None，然后等着hasNext帮忙更新list，下次再next输出。（这个真的很难想到）
+2. 首先从init开始，我们翻转一下list，存储在self.stack里。
+3. 然后next，我们直接返回self.stack.pop().getInteger()，如果最后是整数，则返回，如果不是返回None。
+4. 最后是hasNext，我们写一个while循环，当self.stack不会空时，取stack最后面的值，如果isInteger，就返回True，如果不是，就把最后这个元素通过top.getList()[::-1]翻转后连接到self.stack后面，也就是展平了最后一个元素，然后while循环，直到最后一个元素是integer，返回True，这时候self.stack也更新了。如果self.stack为空，则返回False。
+---
+
+
+
 
 
 
